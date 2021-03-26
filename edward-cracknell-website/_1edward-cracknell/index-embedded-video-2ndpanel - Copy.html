@@ -1,0 +1,534 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Edward Cracknell, Skydiving and Wind Tunnel Athelete</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css?a=2" />
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+        
+        
+<style>
+$accent-color: #FFEC41;
+        body {
+          align-items: center;
+          background: #000046;
+          background: linear-gradient(to right, #1CB5E0, #000046);
+          display: flex;
+          height: 100vh;
+          justify-content: center;
+          margin: 0;
+          padding: 0;
+        }
+        .player {
+          max-width: 1700px;
+          border: 6px solid rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), 0 3px 3px rgba(0, 0, 0, 0.1);
+          position: relative;
+          overflow: hidden;
+        }
+        .player:hover .progress {
+          height: 10px;
+        }
+        .player:hover .player-controls {
+          transform: translateY(0);
+        }
+        .player:-webkit-full-screen, .player:fullscreen {
+          max-width: none;
+          width: 100%;
+        }
+        .play-btn {
+          flex: 1; 
+        }
+        #myvideo {
+          width: 100%;
+          display: block;
+        }
+        .player-btn {
+          background: none;
+          border: 0;
+          color: white;
+          text-align: center;
+          max-width: 60px;
+          padding: 5px 8px;
+            cursor: pointer;
+        }
+        .player-btn svg {
+          fill: #FFFFFF;
+        }
+        .player-btn:hover, .player-btn:focus {
+          border-color: #FFEC41;
+          background: rgba(255, 255, 255, 0.2);
+        }
+        .player-slider {
+          width: 10px;
+          height: 30px;
+        }
+        .player-controls {
+          align-items: center;
+          display: flex;
+          position: absolute;
+          bottom: 0;
+          width: 99.9%;
+          transform: translateY(100%) translateY(-5px);
+          transition: all 0.3s;
+          flex-wrap: wrap;
+          background: rgba(0, 0, 0, 0.3);
+         
+        }
+        .player-controls > * {
+          flex: 1;
+        }
+        .progress {
+          position: relative;
+          display: flex;
+          flex: 10;
+          flex-basis: 100%;
+          height: 4px;
+          transition: height 0.3s;
+          background: rgba(0, 0, 0, 0.5);
+        }
+        .filled-progress {
+          width: 50%;
+          background: #FFEC41;
+          flex: 0;
+          flex-basis: 50%;
+        }
+        .sliders {
+          max-width: 200px;
+          display: flex;
+        }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    input[type=range] {
+          -webkit-appearance: none;
+          background: transparent;
+          width: 100%;
+          margin: 0 5px;
+        }
+        input[type=range]:focus {
+          outline: none;
+        }
+    
+    
+    
+        
+    input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 8px;
+          cursor: pointer;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 10px;
+          border: 0.2px solid rgba(1, 1, 1, 0);
+        }
+   
+    
+    
+    
+    
+    
+    
+        input[type=range]::-webkit-slider-thumb {
+          height: 15px;
+          width: 15px;
+          border-radius: 50px;
+          background: white;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -3.5px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        input[type=range]:focus::-webkit-slider-runnable-track {
+          background: rgba(255, 255, 255, 0.8);
+        }
+        input[type=range]::-moz-range-track {
+          width: 100%;
+          height: 8px;
+          cursor: pointer;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+          background: #ffffff;
+          border-radius: 10px;
+          border: 0.2px solid rgba(1, 1, 1, 0);
+        }
+        input[type=range]::-moz-range-thumb {
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+          height: 15px;
+          width: 15px;
+          border-radius: 50px;
+          background: white;
+          cursor: pointer;
+         }
+		 button#fullscreenbtn {
+        background: url(videos/fullscreen.png) no-repeat right;
+            border:0;
+            width1: 19px;
+            height: 29px;
+            cursor: pointer;
+            margin-top1:-5px;
+            padding1: 5px;
+            opacity: 1;
+           
+        }
+    button#fullscreenbtn:hover {border: none;  background: url(videos/fullscreen-hover.png) no-repeat right;} 
+</style>
+</head>
+
+    
+<body>
+
+		<!-- Header -->
+
+		
+			<header id="header">
+	<!--			<div class="logo"><a href="index.html">Road Trip <span>by TEMPLATED</span></a></div> 
+				<a href="#menu"><span>Menu</span></a> -->
+			</header>
+			
+		
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+		<!--
+			Note: To show a background image, set the "data-bg" attribute below
+			to the full filename of your image. This is used in each section to set
+			the background image.
+		-->
+			<section id="banner" class="bg-img" data-bg="banner.jpg">
+				<div class="inner">
+					<header>
+						<h1>Edward Cracknell</h1>
+						<p1>Skydiving and Wind Tunnel Athlete</p1>
+					</header>
+				</div>
+			<a href="#three" class="more">Learn More</a> <!--   -->	
+			</section>
+
+		
+        <!-- Video -->
+			<section id="three" class="wrapper post bg-img" data-bg="banner6.jpg">
+				<div class="inner">
+					<article class="box111">
+						<div class="content11">
+    							 
+                <div class="player">
+                  <video id="myvideo" src="videos/novaskydiving-7june2020.mp4"></video>
+                    <div class="player-controls">
+                        <div class="progress">
+                            <div class="filled-progress"></div>
+                        </div>
+                    <div class="ply-btn">
+                        <button class="player-btn toggle-play" title="Toggle Play">
+                        <svg class="" width="16" height="16" viewBox="0 0 14 14"><title>play</title><path d="M3 2l10 6-10 6z"></path></svg>
+                        </button>
+                    </div>
+
+                        <div class="sliders">
+                    <input type="range" name="volume" class="player-slider" min="0" max="1" step="0.05" value="1">
+                    </div>
+
+                    <button1></button1>
+                    <button1></button1>
+                    <button onclick="openFullscreen();" id="fullscreenbtn"></button>  
+                    </div>
+                </div>    
+                        
+                        
+                        </div>
+						<footer>
+						<!--	<a href="generic.html" class="button alt">Learn More</a> -->
+						</footer>
+					</article>
+				</div>
+			</section>
+        
+        
+            
+        <!-- One -->
+			<section id="one" class="wrapper post bg-img" data-bg="banner2.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>What I Do</h2>
+						</header>
+						<div class="content">
+							<p>
+								I compete in outdoor freestyle skydiving and wind tunnel competitions on a world class level. 
+								<br>
+								<br>
+								By working for iFLY Manchester I get to develop and improve my bodyflight technique every day.
+								<br>
+								<br>
+								I am keen to pass on this knowledge by Freefly and Tracking coaching as well as Load Organising.
+								<br>
+								<br>
+								With NOVA we do regular trips to Empuriabrava to train with and learn from our coach, the one and only Will Penny. 
+								<br>
+								<br>
+								Last year we became the UK National Champions and took 4th in the World in in Outdoor Freestyle Skydiving.
+								
+							<br>
+							<br>
+								<b>Watch this space as 2021 will be massive!</b>
+							</p>
+						</div>
+						<footer>
+						<!--	<a href="generic.html" class="button alt">Learn More</a> -->
+						</footer>
+					</article>
+				</div>
+			</section>
+
+        
+
+        
+        
+		<!-- Two -->
+			<section id="two" class="wrapper post bg-img" data-bg="banner5.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>NOVA</h2>
+							<p>2016-Present</p>
+						</header>
+						<div class="content">
+							<p1>NOVA is an outdoor freestyle skydiving team consisting of Ed Cracknell (performer) and Chris Mayhew (Video). With the help of our coach we have stepped up to make a name for ourselves on the international stage.</p1>
+							<br>
+    <p1>2021 will be really important to us, we have so much planned - including 
+    the UK Nationals and the World Championships.</p1> <br>
+							<br>
+							<p2>
+                                Achievements so far:
+								<br>
+								<br>														
+								2019 Skydiving World Cup:<i>  Freestyle, 4th Position - NOVA</i><br>
+								2019 UK National:<i>  Freestyle A, Gold medalist - NOVA</i><br>
+								2019 UK Indoor National:<i>  Freestyle, Silver medalist - Ed Cracknell</i><br>
+								2018 UK National:<i>  Freestyle A, Bronze medalist - NOVA</i><br>
+								2018 UK Indoor National:<i>  4 Way Dynamic, Silver medalist - Ed Cracknell</i><br>
+								2017 UK National:<i>  Freestyle A, Bronze medalist - NOVA</i><br>
+								2016 UK National:<i>  Freestyle B, British Champion - NOVA</i>
+                            </p2>
+						</div>
+						<footer>
+						<!--	<a href="generic.html" class="button alt">Learn More</a> -->
+						</footer>
+					</article>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper post bg-img" data-bg="banner4.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Calendar</h2>
+							<p>2021 schedule</p>
+						</header>
+						<div class="content">
+							<p>
+								April 3-5th <i> UK Indoor Nationals: 2WD, 4WD, Freestyle</i>
+								<br>
+							<!--	April 14-19th <i> FAI World Cup Indoor Skydiving: Freestyle, 4WD</i>
+								<br> -->
+								July 18-19th<i> UK Outdoor Nationals: Freestyle, Freefly</i>
+								<br>
+								August<i> Skydiving World Championships Mondial: Freestyle</i>
+								<br>
+								November 21-22nd<i> Flyspot Polish Open: 2WD</i>
+							</p>
+						</div>
+						<footer>
+						<!--	<a href="generic.html" class="button alt">Learn More</a> -->
+						</footer>
+					</article>
+				</div>
+			</section>
+        
+        
+
+
+		<!-- Four -->
+			<section id="four" class="wrapper post bg-img" data-bg="banner3.jpg">
+				<div class="inner">
+					<article class="box">
+						<header>
+							<h2>Team Nova Coaching and Load Organising</h2>
+						</header>
+						<div class="content">
+							<p1>
+								If you would like to come and jump with us for some 1-to-1 coaching or group load organising then reach out to jump with us in the UK.
+								<br>
+								<br>
+								Please contact to progress in the sport and improve your bodyflight techniques in Freefly, Tracking or Freestyle
+								<br>
+								<br>
+                                <a href="mailto:edwardcracknell@protonmail.com" class="list">edwardcracknell@protonmail.com</a>
+								
+							</p1>
+						</div>
+						<footer>
+						<!--	<a href="generic.html" class="button alt">Learn More</a> -->
+						</footer>
+					</article>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+
+					<!--
+					<h2>Contact Me</h2>
+
+					<form action="#" method="post">
+
+						<div class="field half first">
+							<label for="name">Name</label>
+							<input name="name" id="name" type="text" placeholder="Name">
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input name="email" id="email" type="email" placeholder="Email">
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+						</div>
+						<ul class="actions">
+							<li><input value="Send Message" class="button alt" type="submit"></li>
+						</ul>
+					</form>
+
+				
+                    -->
+					<ul class="icons">
+						<li><a href="https://www.facebook.com/Ed-Cracknell-Skydiving-Media-113400076795934/?ref=bookmarks" class="icon round fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/flyedcracknell" class="icon round fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+					</ul>
+
+			<!--	<div class="copyright">
+						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
+					</div>  -->
+
+				</div>
+			</footer>
+
+    <script>
+        const player = document.querySelector('.player');
+        const video = player.querySelector('#myvideo');
+        const progress = player.querySelector('.progress');
+        const progressFilled = player.querySelector('.filled-progress');
+        const toggle = player.querySelector('.toggle-play');
+        const skippers = player.querySelectorAll('[data-skip]');
+        const ranges = player.querySelectorAll('.player-slider');
+   
+        // Logic
+        function togglePlay() {
+          const playState = video.paused ? 'play' : 'pause';
+          video[playState](); // Call play or paused method 
+        }
+
+        function updateButton() {
+          const togglePlayBtn = document.querySelector('.toggle-play');
+
+          if(this.paused) {
+            togglePlayBtn.innerHTML = `<svg class="" width="16" height="16" viewBox="0 0 16 16"><title>play</title><path d="M3 2l10 6-10 6z"></path></svg>`;  
+          } else {
+            togglePlayBtn.innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16"><title>pause</title><path d="M2 2h5v12H2zm7 0h5v12H9z"></path></svg>`;
+          }
+        }
+
+        function skip() {
+          video.currentTime += parseFloat(this.dataset.skip);
+        }
+
+        function rangeUpdate() {
+          video[this.name] = this.value;
+        }
+
+        function progressUpdate() {
+          const percent = (video.currentTime / video.duration) * 100;
+          progressFilled.style.flexBasis = `${percent}%`;
+        }
+
+        function scrub(e) {
+          const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+          video.currentTime = scrubTime;
+        }
+
+        // Event listeners
+        video.addEventListener('click', togglePlay);
+        video.addEventListener('play', updateButton);
+        video.addEventListener('pause', updateButton);
+        video.addEventListener('timeupdate', progressUpdate);
+
+        toggle.addEventListener('click', togglePlay);
+        skippers.forEach(button => button.addEventListener('click', skip));
+        ranges.forEach(range => range.addEventListener('change', rangeUpdate));
+        ranges.forEach(range => range.addEventListener('mousemove', rangeUpdate));
+
+        let mousedown = false;
+        progress.addEventListener('click', scrub);
+        progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+        progress.addEventListener('mousedown', () => mousedown = true);
+        progress.addEventListener('mouseup', () => mousedown = false);
+    
+    
+    /*FROM https://www.w3schools.com/howto/howto_js_fullscreen.asp */
+    /* Get the element you want displayed in fullscreen mode (a video in this example): */
+var elem = document.getElementById("myvideo");
+
+/* When the openFullscreen() function is executed, open the video in fullscreen.
+Note that we must include prefixes for different browsers, as they don't support the requestFullscreen method yet */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>  
+    
+    
+    
+    
+    
+    
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
